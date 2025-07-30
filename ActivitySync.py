@@ -75,7 +75,7 @@ def syncData(username, password, garmin_email = None, garmin_password = None):
     print("用户名:%s" % result['data']['username'])
 
     # get current month data
-    url     = "https://www.imxingzhe.com/api/v1/pgworkout/?offset=0&limit=10&sport=3&year=&month="
+    url     = "https://www.imxingzhe.com/api/v1/pgworkout/?offset=0&limit=20&sport=3&year=&month="
     res     = session.get(url, headers=headers)
     result  = json.loads(res.text, strict=False)
     data  = result["data"]["data"]
